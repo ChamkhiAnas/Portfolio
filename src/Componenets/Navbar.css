@@ -1,0 +1,7 @@
+
+
+#myPortraitSvg {
+    transition: transform 600ms ease-in-out;
+    transform-origin: center center;
+  }
+  
