@@ -5,8 +5,8 @@ import './ShowcaseTitle.css'
 export default function ShowcaseTitle({title,isButton}){
 
     return(
-        <div className="section-name mt-10 border-b border-dashed border-border border-gray-400 py-4 flex">
-        <h6 className="uppercase font-medium text-xl">{title}</h6>
+        <div className="section-name mt-8 border-b border-dashed border-border border-gray-400 py-4 flex">
+        <h6 className="uppercase font-medium text-lg">{title}</h6>
         
         {
         isButton &&

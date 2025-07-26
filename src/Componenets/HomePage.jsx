@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 export default function HomePage(){
 
-    const [work,setWork]=useState([
+    const [projects,setProjects]=useState([
         {name:"Smartzone",type:"Real estate search platform",year:"2025",
         link:"smartzone.immo",
         tags:["Go","Next.js","LiveKit","Python"],
@@ -27,14 +27,63 @@ export default function HomePage(){
     ])
 
 
+    const [sideProjects,setSideProjects]=useState([
+
+        {name:"Smartzone",type:"Real estate search platform",year:"2025",
+        link:"smartzone.immo",
+        tags:["Go","Next.js","LiveKit","Python"],
+        logo:"/smartzone.svg",
+        isVisitLink:true,
+        status:false,
+        description:"Productizing real-time multimodal intelligence. Launched https://www.cartesia.ai/ink-whisper"},
+
+        {name:"Smartzone",type:"Real estate search platform",year:"2025",
+        link:"smartzone.immo",
+        tags:["Go","Next.js","LiveKit","Python"],
+        logo:"/smartzone.svg",
+        isVisitLink:true,
+        status:false,
+        description:"Productizing real-time multimodal intelligence. Launched https://www.cartesia.ai/ink-whisper"},
+
+        {name:"Smartzone",type:"Real estate search platform",year:"2025",
+        link:"smartzone.immo",
+        tags:["Go","Next.js","LiveKit","Python"],
+        logo:"/smartzone.svg",
+        isVisitLink:true,
+        status:false,
+        description:"Productizing real-time multimodal intelligence. Launched https://www.cartesia.ai/ink-whisper"},
+
+        {name:"Smartzone",type:"Real estate search platform",year:"2025",
+        link:"smartzone.immo",
+        tags:["Go","Next.js","LiveKit","Python"],
+        logo:"/smartzone.svg",
+        isVisitLink:true,
+        status:false,
+        description:"Productizing real-time multimodal intelligence. Launched https://www.cartesia.ai/ink-whisper"},
+
+
+
+
+
+    ])
+
+
     function changeStatus(index){
-        setWork(prev =>
+        setProjects(prev =>
             prev.map((item, i) =>
               i === index ? { ...item, status: !item.status } : item
             )
           );
     }
 
+
+    function changeSideStatus(index){
+        setSideProjects(prev=>
+            prev.map((item, i) =>
+            i === index ? { ...item, status: !item.status } : item
+          )
+        )
+    }
 
     return(
         <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
@@ -61,14 +110,20 @@ export default function HomePage(){
 
 
             
-            <ShowcaseTitle title={"Work"} isButton={true}></ShowcaseTitle>
+            <ShowcaseTitle title={"PROJECTS"} isButton={true}></ShowcaseTitle>
 
 
-            {work.map((item, index) => (
+            {projects.map((item, index) => (
             <ShowcaseGrid onShow={()=>changeStatus(index)} key={index} {...item} />
             ))}
 
 
+            <ShowcaseTitle title={"Side projects"} isButton={true}></ShowcaseTitle>
+
+
+            {sideProjects.map((item, index) => (
+            <ShowcaseGrid onShow={()=>changeSideStatus(index)} key={index} {...item} />
+            ))}
 
         
 
