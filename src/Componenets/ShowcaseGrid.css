@@ -1,3 +1,18 @@
-.show-case{
-    font-family: "JetBrains Mono", monospace;   
+
+
+.accordion-name{
+    font-family: "Darker Grotesque", sans-serif !important;
 }
+
+.accordion-hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .accordion-hidden.open {
+    max-height: 500px; /* large enough for content */
+    opacity: 1;
+  }
+  

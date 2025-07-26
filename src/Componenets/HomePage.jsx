@@ -1,18 +1,51 @@
 import './HomePage.css'
 import InteractiveNoiseBox from "./DotMatrix";
 import ShowcaseGrid from './ShowcaseGrid';
+import ShowcaseTitle from './ShowcaseTitle';
+
+import { useState } from 'react';
 
 export default function HomePage(){
+
+    const [work,setWork]=useState([
+        {name:"Smartzone",type:"Real estate search platform",year:"2025",
+        link:"smartzone.immo",
+        tags:["Go","Next.js","LiveKit","Python"],
+        logo:"/smartzone.svg",
+        isVisitLink:true,
+        status:false,
+        description:"Productizing real-time multimodal intelligence. Launched https://www.cartesia.ai/ink-whisper"},
+
+        {name:"Smartzone",type:"Real estate search platform",year:"2025",
+        link:"smartzone.immo",
+        tags:["Go","Next.js","LiveKit","Python"],
+        logo:"/smartzone.svg",
+        isVisitLink:true,
+        status:false,
+        description:"Productizing real-time multimodal intelligence. Launched https://www.cartesia.ai/ink-whisper"},
+
+    ])
+
+
+    function changeStatus(index){
+        setWork(prev =>
+            prev.map((item, i) =>
+              i === index ? { ...item, status: !item.status } : item
+            )
+          );
+    }
+
+
     return(
         <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
 
-            <h1 className="font-extrabold text-2xl">
+            <h1 className="name font-extrabold text-2xl">
             👋 HEY I'M ANAS CHAMKHI<span className="animate-pulse">.</span>                                                               
             </h1>
 
 
             <div className="grid description grid-cols-5">
-                <h4 className="text-sm my-8   font-normal  col-span-5">
+                <h4 className="text-xl my-6   font-medium  col-span-5">
                     A web developer and tech enthusiast, crafting intuitive digital experiences with precision and creativity.
                     turning ideas into fast, functional, and beautiful web products — one line of code at a time , i've been building things for <span className="underline font-semibold ml-2">1,825 days</span>
                 </h4>
@@ -28,8 +61,12 @@ export default function HomePage(){
 
 
             
+            <ShowcaseTitle title={"Work"} isButton={true}></ShowcaseTitle>
 
-            <ShowcaseGrid ></ShowcaseGrid>
+
+            {work.map((item, index) => (
+            <ShowcaseGrid onShow={()=>changeStatus(index)} key={index} {...item} />
+            ))}
 
 
 
