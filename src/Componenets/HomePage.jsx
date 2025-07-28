@@ -90,7 +90,7 @@ export default function HomePage(){
         <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
 
             <h1 className="name font-extrabold text-2xl">
-            👋 HEY I'M ANAS CHAMKHI<span className="animate-pulse">.</span>                                                               
+            👋 HEY I'M ANAS <span className="animate-pulse">CHAMKHI.</span>                                                               
             </h1>
 
 

@@ -21,7 +21,7 @@ const SimplexCanvasGrid = () => {
 
       for (let x = 0; x < canvas.width / 10; x++) {
         for (let y = 0; y < canvas.height / 10; y++) {
-          const value = Math.abs(noise3D.current(x / 200, y / 100, t / 80));
+          const value = Math.abs(noise3D.current(x / 30, y / 60, t / 80));
           const size = 4 * value;
           ctx.fillStyle = 'black';
           ctx.fillRect(x * 10, y * 10, size, size);
