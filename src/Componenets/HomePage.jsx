@@ -2,6 +2,7 @@ import './HomePage.css'
 import InteractiveNoiseBox from "./DotMatrix";
 import ShowcaseGrid from './ShowcaseGrid';
 import ShowcaseTitle from './ShowcaseTitle';
+import Directory from './Directory';
 
 import { useState } from 'react';
 
@@ -118,20 +119,22 @@ export default function HomePage(){
             ))}
 
 
-            <ShowcaseTitle title={"Side projects"} isButton={true}></ShowcaseTitle>
+            <ShowcaseTitle title={"Side projects"} isButton={false}></ShowcaseTitle>
 
 
             {sideProjects.map((item, index) => (
             <ShowcaseGrid onShow={()=>changeSideStatus(index)} key={index} {...item} />
             ))}
 
-        
+            
+            <ShowcaseTitle title={"Directory"} isButton={false}></ShowcaseTitle>
 
 
-       
-
-
-
+            <div className='mt-10 flex flex-col gap-4'>
+                <Directory name={"Collage Artworks"} description={"When I'm not coding, I'm cutting and layering. code is my craft, but art is my escape. View my collage works"} link={""}></Directory>
+                <Directory name={"Resources"} description={"A handpicked list of tools and guides that fuel my creative and coding workflow"} link={""}></Directory>
+                <Directory name={"Moodwaves"} description={"Music fuels my flow—here's what’s playing in my ears when I’m building cool stuff"} link={""}></Directory>
+            </div>
 
 
         </main>
