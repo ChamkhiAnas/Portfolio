@@ -3,6 +3,7 @@ import { createBrowserRouter,createRoutesFromElements,Route,Routes } from "react
 import HomeLayout from "../Componenets/HomeLayout";
 import HomePage from "../Componenets/HomePage";
 import CollagePage from "../Componenets/CollagePage";
+import RessourcePage from "../Componenets/RessourcePage";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -14,6 +15,8 @@ const routes = createBrowserRouter(
         <Route index element={<HomePage />} />
 
         <Route path="/collage" element={<CollagePage />} />
+
+        <Route path="/ressources" element={<RessourcePage/>}/>
 
 
       </Route>

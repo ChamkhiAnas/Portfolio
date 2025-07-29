@@ -26,7 +26,7 @@ export default function Navbar(){
       fill: "#000",          
       duration: 0.2,         
       ease: "power1.in",
-      stagger: 0.2         
+      stagger: 0.1         
     });
 
   }, { scope: container });

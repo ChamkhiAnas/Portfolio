@@ -62,10 +62,6 @@ export default function HomePage(){
         status:false,
         description:"Productizing real-time multimodal intelligence. Launched https://www.cartesia.ai/ink-whisper"},
 
-
-
-
-
     ])
 
 
