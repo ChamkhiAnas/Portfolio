@@ -40,7 +40,7 @@ export default function CollagePage(){
         <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
 
             <h1 className="name font-extrabold text-2xl">
-            Collage <span className="animate-pulse">Artworks</span>                                                               
+            Collage Artworks                                                           
             </h1>
 
             <div className="grid description grid-cols-5">

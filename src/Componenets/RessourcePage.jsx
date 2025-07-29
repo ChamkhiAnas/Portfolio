@@ -93,12 +93,12 @@ export default function RessourcePage(){
         <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
 
             <h1 className="name font-extrabold text-2xl">
-            Ressources <span className="animate-pulse">Hub</span>                                                               
+            Ressources Hub                                                               
             </h1>
 
             <div className="grid description grid-cols-5">
                 <h4 className="text-xl my-6   font-medium  col-span-5">
-                Welcome to my Resources Hub — a carefully curated collection of the tools, apps, guides, and references that I rely on throughout my creative and development process. Whether I’m designing sleek interfaces, coding functional and efficient systems, or simply looking for inspiration, these resources are part of my daily workflow. From design systems and development utilities to productivity hacks and learning platforms, this hub reflects the real tools I use and trust. Whether you're a fellow developer, designer, or just curious, I hope this collection can also spark ideas or support your own creative journey.
+                Welcome to my Resources Hub — a carefully curated collection of the tools, apps, guides, and references that I rely on throughout my creative and development process. Whether I’m designing sleek interfaces, coding functional and efficient systems, or simply looking for inspiration, these resources are part of my daily workflow
                 </h4>
             </div>
 
