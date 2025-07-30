@@ -4,6 +4,7 @@ import MusicPlayer from "./MusicPlayer";
 export default function MusicPage(){
 
 
+
     const [playlist,setPlaylist] = useState([
         {
           title: "Dalida- Gigi L'amoroso",
@@ -35,18 +36,6 @@ export default function MusicPage(){
 
       const playerRef = useRef(null);
 
-      console.log("currentSong",currentSong) 
-
-
-      useEffect(() => {
-        ;
-      }, [currentIndex]);
-
-
-      const handleSelect = (index) => {
-        setCurrentIndex(index);
-        setPlaying(true); 
-      };
 
 
       function onPlayingChange(value){
@@ -56,14 +45,29 @@ export default function MusicPage(){
       function onMutingChange(value){
         setMute(value)
       }
+
+
+      function onChangeTime(value){
+        playerRef.current.api.seekTo(value,"seconds")
+      }
+
+      function handleEnded(){
+        console.log("Song ended - native ReactPlayer callback")
+      }
   
       function onNextTrack(){
-        currentIndex<playlist.length-1 && setCurrentIndex(currentIndex+1),setCurrentSong(playlist[currentIndex+1])
+        currentIndex<playlist.length-1 && (() => {
+          setCurrentIndex(currentIndex + 1);
+          setCurrentSong(playlist[currentIndex + 1]);
+        })()
         setPlaying(true)
       }
 
       function onPreviousTrack(){
-        currentIndex>0 && setCurrentIndex(currentIndex-1),setCurrentSong(playlist[currentIndex-1])
+        currentIndex>0 &&  (() => {
+          setCurrentIndex(currentIndex-1);
+          setCurrentSong(playlist[currentIndex-1]);
+        })()
         setPlaying(true)
       }
   
@@ -83,23 +87,7 @@ export default function MusicPage(){
             </div>
 
 
-            {/* <ul style={{ listStyle: "none", padding: 0 }}>
-                {playlist.map((item, index) => (
-                <li
-                    key={index}
-                    onClick={() => handleSelect(index)}
-                    style={{
-                    cursor: "pointer",
-                    padding: "8px 12px",
-                    backgroundColor: index === currentIndex ? "#ddd" : "transparent",
-                    borderRadius: 4,
-                    marginBottom: 4,
-                    }}
-                >
-                    {item.title}
-                </li>
-                ))}
-            </ul> */}
+     
 
 
             <MusicPlayer  
@@ -109,6 +97,7 @@ export default function MusicPage(){
             onMutingChange={onMutingChange}
             onNextTrack={onNextTrack}
             onPreviousTrack={onPreviousTrack}
+            onChangeTime={onChangeTime}
             />
 
 
@@ -129,8 +118,9 @@ export default function MusicPage(){
                 ref={playerRef}
                 src={playlist[currentIndex].url}
                 playing={playing}
-                controls={true}
+                controls={true} 
                 muted={mute}
+                onEnded={handleEnded}
                 width="100%"
                 height="200px"
                 style={{ pointerEvents: "none" }} 

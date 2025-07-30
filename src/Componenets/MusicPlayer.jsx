@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutingChange,onNextTrack,onPreviousTrack}) {
+export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutingChange,onNextTrack,onPreviousTrack,onChangeTime}) {
 
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -15,6 +15,7 @@ export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutin
   useEffect(() => {
     setDuration(currentSong?.duration);
     setTitle(currentSong?.title);
+    setCurrentTime(0)
   }, [currentSong]);
 
 
@@ -61,6 +62,7 @@ export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutin
       const percentage = clickX / width;
       const newTime = percentage * duration;
       setCurrentTime(Math.max(0, Math.min(newTime, duration)));
+      onChangeTime(Math.max(0, Math.min(newTime, duration)))
     }
   };
 
@@ -83,9 +85,7 @@ export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutin
   }, [isPlaying, duration]);
 
 
-  useEffect(() => {
-    console.log("currentSong music player",currentSong)
-  }, []);
+
 
   return (
     <div className="w-full max-w-4xl mx-auto bg-gray-900 border border-gray-700 rounded-lg overflow-hidden">
