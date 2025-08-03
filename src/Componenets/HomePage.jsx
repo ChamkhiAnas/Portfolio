@@ -76,7 +76,7 @@ export default function HomePage(){
 
 
             
-            <ShowcaseTitle title={"PROJECTS"} isButton={true}></ShowcaseTitle>
+            <ShowcaseTitle title={t('home.section1name')} isButton={true}></ShowcaseTitle>
 
 
             {projects.map((item, index) => (
@@ -84,7 +84,7 @@ export default function HomePage(){
             ))}
 
 
-            <ShowcaseTitle title={"Side projects"} isButton={false}></ShowcaseTitle>
+            <ShowcaseTitle title={t('home.section2name')} isButton={false}></ShowcaseTitle>
 
 
             {sideProjects.map((item, index) => (
@@ -92,7 +92,7 @@ export default function HomePage(){
             ))}
 
             
-            <ShowcaseTitle title={"Directory"} isButton={false}></ShowcaseTitle>
+            <ShowcaseTitle title={t('home.section3name')} isButton={false}></ShowcaseTitle>
 
 
             <div className='mt-4 mb-10 flex flex-col gap-4'>

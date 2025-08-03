@@ -1,9 +1,10 @@
 import './ShowcaseGrid.css'
+import { useTranslation } from 'react-i18next';
+
 export default function ShowcaseGrid({name,type,year,link,tags,logo,isVisitLink,status,description,onShow}){
 
+    const { t,i18n } = useTranslation();
 
-    // const lines = description.split('\n');
-    console.log("description",description)
 
     function showAccordion(){
         onShow();
@@ -62,7 +63,7 @@ export default function ShowcaseGrid({name,type,year,link,tags,logo,isVisitLink,
                                     <div className='accordion-visit-link ml-auto cursor-pointer'>
                                         
                                         <label  className='bg-blue-100 flex justify-center items-center hover:bg-blue-200 text-blue-800 cursor-pointer px-3 rounded-sm py-1'>
-                                                <span>Visit it</span>
+                                                <span>{t('home.link')}</span>
                                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="h-3 w-3 ml-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"></path><path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"></path></svg>
                                         </label>
 

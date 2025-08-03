@@ -4,79 +4,95 @@
       "description1": "Développeur web et passionné de technologie, je crée des expériences digitales intuitives — transformant les idées en produits web rapides, fonctionnels et esthétiques, étape par étape.",
       "description2": "Pendant 5 ans, j'ai travaillé à distance avec la startup z-tech en France, développant des outils immobiliers qui automatisent les processus et simplifient les systèmes complexes.",
       "description3": "Curieux de nature, j’aime résoudre des problèmes avec du code, allier design et fonctionnalité, et apprendre chaque jour. Je suis aujourd’hui à la recherche de nouvelles aventures où créer, évoluer et laisser ma trace.",
-      "resume":"cv",
+      "resume":"Mon cv",
+      "link":"Essayez maintenant",
+      "section1name":"projets",
+      "section2name":"projets personnels",
+      "section3name":"répertoire",
+
+      "projects":[
+
+        {
+          "name": "ImmoCockpit",
+          "type": "Outil d’analyse et d’aide à la décision conçu pour les professionnels de l’immobilier.",
+          "year": "",
+          "link": "immocockpit.fr",
+          "tags": ["Nuxt.js", "Laravel", "Leafletjs", "Mapbox","Apexcharts.js","jsPDF","PostgreSQL","OpenData(APIs REST,GeoJSON)","Nginx","Figma"],
+          "logo": "/immocockpit.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": [
+            "Fonctionnalités principales :",
+            "- Générateur de rapports d’évaluation : création rapide, fiable et personnalisable de rapports PDF d’estimation immobilière.",
+            "- Carte d’intelligence d’adresse : accès instantané aux données locales (transports, commerces, écoles, etc.) avec visualisation dynamique des itinéraires.",
+            "- Générateur d’annonces enrichies par IA : création automatique d’annonces immobilières détaillées via un formulaire intelligent incluant des critères spécifiques (proximité plage, colocation, locations saisonnières, etc.).",
+            "- Scan de diagnostic énergétique (DPE) : carte interactive des performances énergétiques avec filtres multicritères.",
+            "- Carte avancée DVF : analyse des ventes immobilières passées avec filtres précis (surface, période, type de bien, statut de vente)."
+          ]
+        },
       
-      "projects": [
-    
         {
           "name": "Smartzone",
-          "type": "Smart real estate search web application",
-          "year": "2025",
+          "type": "Recherche immobilière intelligente",
+          "year": "",
           "link": "smartzone.immo",
-          "tags": ["Go", "Next.js", "LiveKit", "Python"],
+          "tags": ["Laravel", "Vue.js", "Vuex", "Leafletjs", "Mapbox","PostgreSQL","OpenData(APIs REST,GeoJSON)","Figma"],
           "logo": "/smartzone.svg",
           "isVisitLink": true,
           "status": false,
           "description": [
-            "Web platform connecting the various stakeholders in the real estate sector.",
-            "Main feature: an intelligent geolocation system that calculates distances and travel times from a property to relevant points of interest (schools, shops, transport, etc.) based on different modes of transportation (car, bike, walking, public transit).",
-            "Additional features:",
-            "- Search for real estate based on travel time to specific locations.",
-            "- Draw a custom zone on the map to filter and search properties within that area.",
-            "- Browse listings of real estate ads as well as real estate agencies."
+            "Plateforme web reliant les différents acteurs du secteur immobilier.",
+            "Fonctionnalité principale : système de géolocalisation intelligent calculant distances et temps de trajet entre un bien immobilier et les points d’intérêt (écoles, commerces, transports, etc.) selon différents modes de déplacement (voiture, vélo, marche, transports en commun).",
+            "Fonctionnalités supplémentaires :",
+            "- Recherche immobilière basée sur le temps de trajet vers des lieux précis.",
+            "- Dessin d’une zone personnalisée sur la carte pour filtrer et rechercher des biens dans cette zone.",
+            "- Consultation des annonces immobilières ainsi que des agences immobilières."
           ]
         }
       ],
-      "sideProjects": [
+      
+      "sideProjects":[
+
         {
-          "name": "Smartzone",
-          "type": "Plateforme de recherche immobilière",
-          "year": "2025",
-          "link": "smartzone.immo",
-          "tags": ["Go", "Next.js", "LiveKit", "Python"],
-          "logo": "/smartzone.svg",
+          "name": "GenImmo",
+          "type": "Générateur d’annonces immobilières  par IA",
+          "year": "",
+          "link": "genimmo.ma",
+          "tags": ["React", "Nest.js","Leafletjs", "Mapbox","MangoDB","Figma","OpenAI"],
+          "logo": "/genImmooo.svg",
           "isVisitLink": true,
           "status": false,
-          "description": "Développement d’une intelligence multimodale en temps réel. Lancement de https://www.cartesia.ai/ink-whisper"
+          "description": [
+            "Générateur d’annonces immobilières basé sur l’IA pour le marché marocain.",
+            "Application web automatisant la création d’annonces immobilières de qualité, localisées et adaptées au marché marocain. Grâce à l’IA, elle produit des descriptions de biens bien rédigées et enrichies de données dynamiques comme les points d’intérêt à proximité (écoles, commerces, transports, etc.).",
+            "Conçue pour faciliter la création de contenu des agents immobiliers, cet outil fait gagner du temps tout en améliorant la cohérence et la qualité des annonces."
+          ]
         },
+      
         {
-          "name": "Smartzone",
-          "type": "Plateforme de recherche immobilière",
-          "year": "2025",
-          "link": "smartzone.immo",
-          "tags": ["Go", "Next.js", "LiveKit", "Python"],
-          "logo": "/smartzone.svg",
+          "name": "TrouveTonDéputé",
+          "type": "Application de matching politique basée sur l’opinion pour les élections françaises",
+          "year": "",
+          "link": "trouvetondéputé",
+          "tags": ["Nuxt.js","AirTable","Vercel","OpenData(APIs REST,GeoJSON)","Figma"],
+          "logo": "/trouve.svg",
           "isVisitLink": true,
           "status": false,
-          "description": "Développement d’une intelligence multimodale en temps réel. Lancement de https://www.cartesia.ai/ink-whisper"
-        },
-        {
-          "name": "Smartzone",
-          "type": "Plateforme de recherche immobilière",
-          "year": "2025",
-          "link": "smartzone.immo",
-          "tags": ["Go", "Next.js", "LiveKit", "Python"],
-          "logo": "/smartzone.svg",
-          "isVisitLink": true,
-          "status": false,
-          "description": "Développement d’une intelligence multimodale en temps réel. Lancement de https://www.cartesia.ai/ink-whisper"
-        },
-        {
-          "name": "Smartzone",
-          "type": "Plateforme de recherche immobilière",
-          "year": "2025",
-          "link": "smartzone.immo",
-          "tags": ["Go", "Next.js", "LiveKit", "Python"],
-          "logo": "/smartzone.svg",
-          "isVisitLink": true,
-          "status": false,
-          "description": "Développement d’une intelligence multimodale en temps réel. Lancement de https://www.cartesia.ai/ink-whisper"
+          "description": [
+            "Application web open-source aidant les électeurs français à faire un choix éclairé pour les élections législatives 2024. Les utilisateurs répondent à une série de questions politiques en choisissant « Pour » ou « Contre ». L’application analyse leurs réponses pour déterminer le parti politique qui correspond le mieux à leurs opinions. Elle affiche ensuite ce parti avec son programme complet, facilitant ainsi la découverte d’un véritable alignement avec les propositions politiques actuelles."
+          ]
         }
+      
       ],
+      
+
+
+      
+    
       "directory": [
         {
           "name": "Collages",
-          "description": "Quand je ne code pas, je crée des collages en découpant et superposant des images. Le code est mon métier, mais l’art reste ma passion. Découvrez mes œuvres.",
+          "description": "Quand je ne code pas, je crée des collages en découpant et superposant des images. Découvrez mes œuvres.",
           "link": ""
         },
         {

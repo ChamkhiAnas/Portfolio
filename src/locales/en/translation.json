@@ -4,7 +4,8 @@
       "description1": "I'm a web developer and tech enthusiast passionate about crafting intuitive digital experiences — turning ideas into fast, functional, and visually engaging web products, one line of code at a time",
       "description2":"For 5 years, I worked remotely with a Z-tech startup in france, creating real estate tools that automate workflows and simplify complex systems.",
       "description3":"Curious by nature, I love solving problems through code, blending design with function, and learning something new every day,currently exploring new adventures where I can build, grow, and leave a meaningful mark.",        
-      "resume":"resume",
+      "resume":"Resume",
+      "link":"Try it out",
       "section1name":"projects",
       "section2name":"side projects",
       "section3name":"directory",
@@ -53,10 +54,10 @@
 
         {
           "name": "GenImmo",
-          "type": "AI-Powered Real Estate Ad Generator",
+          "type": "AI-Powered real estate ad generator",
           "year": "",
           "link": "genimmo.ma",
-          "tags": ["React", "Nest.js","Leafletjs", "Mapbox","MangoDB","Figma"],
+          "tags": ["React", "Nest.js","Leafletjs", "Mapbox","MangoDB","Figma","OpenAI"],
           "logo": "/genImmooo.svg",
           "isVisitLink": true,
           "status": false,
@@ -65,6 +66,19 @@
             "A web application that automates the creation of high-quality, localized real estate ads tailored for the Moroccan market. Using AI, it generates well-written property descriptions enriched with dynamic data such as nearby points of interest (schools, shops, transport, etc.)",
             "Designed to streamline content creation for real estate agents, the tool saves time while enhancing ad consistency and quality."
 
+          ]
+        },
+        {
+          "name": "TrouveTonDéputé",
+          "type": "French political opinion-based matchmaking voting app",
+          "year": "",
+          "link": "trouvetondéputé",
+          "tags": ["Nuxt.js","AirTable","Vercel","OpenData(APIs REST,GeoJSON)","Figma"],
+          "logo": "/trouve.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": [
+            "An open-source web app that helps French voters make informed decisions for the 2024 legislative elections. Users answer a series of political questions by choosing “For” or “Against,” and the app analyzes their responses to determine which political party best matches their views. It then displays the corresponding party along with its full political program, helping users explore real alignment with current political offerings."
           ]
         }
     
