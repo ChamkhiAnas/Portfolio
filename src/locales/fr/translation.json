@@ -1,0 +1,96 @@
+{
+    "home": {
+      "welcome": "👋 SALUT, JE SUIS ANAS CHAMKHI.",
+      "description1": "Développeur web et passionné de technologie, je crée des expériences digitales intuitives — transformant les idées en produits web rapides, fonctionnels et esthétiques, étape par étape.",
+      "description2": "Pendant 5 ans, j'ai travaillé à distance avec la startup z-tech en France, développant des outils immobiliers qui automatisent les processus et simplifient les systèmes complexes.",
+      "description3": "Curieux de nature, j’aime résoudre des problèmes avec du code, allier design et fonctionnalité, et apprendre chaque jour. Je suis aujourd’hui à la recherche de nouvelles aventures où créer, évoluer et laisser ma trace.",
+      "resume":"cv",
+      
+      "projects": [
+    
+        {
+          "name": "Smartzone",
+          "type": "Smart real estate search web application",
+          "year": "2025",
+          "link": "smartzone.immo",
+          "tags": ["Go", "Next.js", "LiveKit", "Python"],
+          "logo": "/smartzone.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": [
+            "Web platform connecting the various stakeholders in the real estate sector.",
+            "Main feature: an intelligent geolocation system that calculates distances and travel times from a property to relevant points of interest (schools, shops, transport, etc.) based on different modes of transportation (car, bike, walking, public transit).",
+            "Additional features:",
+            "- Search for real estate based on travel time to specific locations.",
+            "- Draw a custom zone on the map to filter and search properties within that area.",
+            "- Browse listings of real estate ads as well as real estate agencies."
+          ]
+        }
+      ],
+      "sideProjects": [
+        {
+          "name": "Smartzone",
+          "type": "Plateforme de recherche immobilière",
+          "year": "2025",
+          "link": "smartzone.immo",
+          "tags": ["Go", "Next.js", "LiveKit", "Python"],
+          "logo": "/smartzone.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": "Développement d’une intelligence multimodale en temps réel. Lancement de https://www.cartesia.ai/ink-whisper"
+        },
+        {
+          "name": "Smartzone",
+          "type": "Plateforme de recherche immobilière",
+          "year": "2025",
+          "link": "smartzone.immo",
+          "tags": ["Go", "Next.js", "LiveKit", "Python"],
+          "logo": "/smartzone.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": "Développement d’une intelligence multimodale en temps réel. Lancement de https://www.cartesia.ai/ink-whisper"
+        },
+        {
+          "name": "Smartzone",
+          "type": "Plateforme de recherche immobilière",
+          "year": "2025",
+          "link": "smartzone.immo",
+          "tags": ["Go", "Next.js", "LiveKit", "Python"],
+          "logo": "/smartzone.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": "Développement d’une intelligence multimodale en temps réel. Lancement de https://www.cartesia.ai/ink-whisper"
+        },
+        {
+          "name": "Smartzone",
+          "type": "Plateforme de recherche immobilière",
+          "year": "2025",
+          "link": "smartzone.immo",
+          "tags": ["Go", "Next.js", "LiveKit", "Python"],
+          "logo": "/smartzone.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": "Développement d’une intelligence multimodale en temps réel. Lancement de https://www.cartesia.ai/ink-whisper"
+        }
+      ],
+      "directory": [
+        {
+          "name": "Collages",
+          "description": "Quand je ne code pas, je crée des collages en découpant et superposant des images. Le code est mon métier, mais l’art reste ma passion. Découvrez mes œuvres.",
+          "link": ""
+        },
+        {
+          "name": "Ressources",
+          "description": "Une sélection d’outils et de guides essentiels qui nourrissent ma créativité et mon travail de développement.",
+          "link": ""
+        },
+        {
+          "name": "Moodwaves",
+          "description": "La musique qui m’accompagne et nourrit mon inspiration quand je code mes projets.",
+          "link": ""
+        }
+      ],
+      "footer": "PAR"
+    }
+  }
+  

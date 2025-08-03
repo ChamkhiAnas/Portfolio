@@ -8,17 +8,13 @@
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.15s ease-in-out, 
-                opacity 0.15s ease-in-out, 
-                max-height 0.15s ease-in-out;
+    transition: 
+    opacity 0.2s ease-in 0.1s; 
             
     }
   
   .accordion-hidden.open {
-    max-height: 500px; /* large enough for content */
+    max-height: 500px; 
     opacity: 1;
-      transform: scaleY(1);
   }
   

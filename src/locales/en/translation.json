@@ -1,0 +1,92 @@
+{
+    "home": {
+      "welcome": "👋 HEY I'M ANAS CHAMKHI.",
+      "description1": "I'm a web developer and tech enthusiast passionate about crafting intuitive digital experiences — turning ideas into fast, functional, and visually engaging web products, one line of code at a time",
+      "description2":"For 5 years, I worked remotely with a Z-tech startup in france, creating real estate tools that automate workflows and simplify complex systems.",
+      "description3":"Curious by nature, I love solving problems through code, blending design with function, and learning something new every day,currently exploring new adventures where I can build, grow, and leave a meaningful mark.",        
+      "resume":"resume",
+      "section1name":"projects",
+      "section2name":"side projects",
+      "section3name":"directory",
+      "projects":[
+
+        {
+          "name": "ImmoCockpit",
+          "type": " An analysis and decision-support tool designed for real estate professionals.",
+          "year": "",
+          "link": "immocockpit.fr",
+          "tags": ["Nuxt.js", "Laravel", "Leafletjs", "Mapbox","Apexcharts.js","jsPDF","PostgreSQL","OpenData(APIs REST,GeoJSON)","Nginx","Figma"],
+          "logo": "/immocockpit.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": [
+            "Key Features:",
+            "- Valuation Report Generator: Create fast, reliable, and customizable property pdf valuation reports.",
+            "- Address Intelligence Map: Instantly access local data (transport, shops, schools, etc.) with dynamic route visualizations.",
+            "- AI-Powered Listing Generator: Automatically generate enriched real estate listings through a smart form that includes specific criteria (beach proximity, shared housing, seasonal rentals, etc.).",
+            "- Energy Audit Scan (DPE): Interactive map of energy performance diagnostics with multi-criteria filtering.",
+            "- Advanced DVF Map: Analyze past property sales using precise filters (area, time period, property type, sale status)."
+
+          ]
+        },
+      
+          {
+            "name": "Smartzone",
+            "type": "Smart real estate search",
+            "year": "",
+            "link": "smartzone.immo",
+            "tags": ["Laravel", "Vue.js", "Vuex", "Leafletjs", "Mapbox","PostgreSQL","OpenData(APIs REST,GeoJSON)","Figma"],
+            "logo": "/smartzone.svg",
+            "isVisitLink": true,
+            "status": false,
+            "description": [
+              "Web platform connecting the various stakeholders in the real estate sector.",
+              "Main feature: an intelligent geolocation system that calculates distances and travel times from a property to relevant points of interest (schools, shops, transport, etc.) based on different modes of transportation (car, bike, walking, public transit).",
+              "Additional features:",
+              "- Search for real estate based on travel time to specific locations.",
+              "- Draw a custom zone on the map to filter and search properties within that area.",
+              "- Browse listings of real estate ads as well as real estate agencies."
+            ]
+          }
+      ],
+      "sideProjects":[
+
+        {
+          "name": "GenImmo",
+          "type": "AI-Powered Real Estate Ad Generator",
+          "year": "",
+          "link": "genimmo.ma",
+          "tags": ["React", "Nest.js","Leafletjs", "Mapbox","MangoDB","Figma"],
+          "logo": "/genImmooo.svg",
+          "isVisitLink": true,
+          "status": false,
+          "description": [
+            "AI-Powered Real Estate Ad Generator for moroccan market",
+            "A web application that automates the creation of high-quality, localized real estate ads tailored for the Moroccan market. Using AI, it generates well-written property descriptions enriched with dynamic data such as nearby points of interest (schools, shops, transport, etc.)",
+            "Designed to streamline content creation for real estate agents, the tool saves time while enhancing ad consistency and quality."
+
+          ]
+        }
+    
+      ],
+      "directory":[
+        {
+            "name":"Collage Artworks",
+            "description":"When I'm not coding, I'm cutting and layering. code is my craft, but art is my escape. View my collage works",
+            "link":""
+        },
+        {
+            "name":"Resources",
+            "description":"A handpicked list of tools and guides that fuel my creative and coding workflow",
+            "link":""
+        },
+        {
+            "name":"Moodwaves",
+            "description":"Music fuels my flow—here's what’s playing in my ears when I’m building cool stuff",
+            "link":""
+        }      
+      ],
+      "footer": "BY"
+    }
+  }
+  

@@ -3,26 +3,22 @@ import React, { useState, useRef, useEffect } from 'react';
 export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutingChange,onNextTrack,onPreviousTrack,onChangeTime}) {
 
 
-  const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(currentSong?.duration);
   const [volume, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
-  const [title,setTitle]=useState(currentSong?.title)
+  const [title, setTitle] = useState(currentSong?.title);
+  const [duration, setDuration] = useState(currentSong?.duration);
   const progressRef = useRef(null);
 
 
   useEffect(() => {
-    setDuration(currentSong?.duration);
     setTitle(currentSong?.title);
+    setDuration(currentSong?.duration);
     setCurrentTime(0)
   }, [currentSong]);
 
 
 
-  useEffect(() => {
-    setIsPlaying(playing);
-  }, [playing]);
 
 
   function formatTime  (time)  {
@@ -31,16 +27,7 @@ export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutin
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
 
-  function changePlaying(){
-    setIsPlaying(prev => {
-        const newPlaying = !prev;
-        if (onPlayingChange) {
-          onPlayingChange(newPlaying);
-        }
-        return newPlaying;
-      });
-
-  }
+  
 
   function changeMute(){
     setIsMuted(prev => {
@@ -70,11 +57,11 @@ export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutin
 
   useEffect(() => {
     let interval;
-    if (isPlaying) {
+    if (playing) {
       interval = setInterval(() => {
         setCurrentTime(prev => {
           if (prev >= duration) {
-            setIsPlaying(false);
+            onPlayingChange(false);
             return 0;
           }
           return prev + 1;
@@ -82,7 +69,7 @@ export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutin
       }, 1000);
     }
     return () => clearInterval(interval);
-  }, [isPlaying, duration]);
+  }, [playing, duration]);
 
 
 
@@ -115,10 +102,10 @@ export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutin
             <button
                 type="button"
                 className="h-10 w-10 p-0 cursor-pointer text-white hover:bg-gray-700 rounded flex items-center justify-center"
-                onClick={() => changePlaying()}
-                aria-label={isPlaying ? "Pause" : "Play"}
+                onClick={() => onPlayingChange(!playing)}
+                aria-label={playing ? "Pause" : "Play"}
             >
-                {isPlaying ? (
+                {playing ? (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -242,27 +229,7 @@ export default function MusicPlayer({currentSong,playing,onPlayingChange,onMutin
                 )}
             </button>
             
-            <button
-                type="button"
-                className="h-8 w-8 p-0 flex cursor-pointer justify-center items-center text-white hover:bg-gray-700 rounded"
-                aria-label="Maximize"
-            >
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                >
-                <path d="M8 3H5a2 2 0 00-2 2v3" />
-                <path d="M16 21h3a2 2 0 002-2v-3" />
-                <path d="M21 8V5a2 2 0 00-2-2h-3" />
-                <path d="M3 16v3a2 2 0 002 2h3" />
-                </svg>
-            </button>
+          
             </div>
       </div>
     </div>
