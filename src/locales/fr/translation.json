@@ -5,6 +5,8 @@
       "description2": "Pendant 5 ans, j'ai travaillé à distance avec la startup z-tech en France, développant des outils immobiliers qui automatisent les processus et simplifient les systèmes complexes.",
       "description3": "Curieux de nature, j’aime résoudre des problèmes avec du code, allier design et fonctionnalité, et apprendre chaque jour. Je suis aujourd’hui à la recherche de nouvelles aventures où créer, évoluer et laisser ma trace.",
       "resume":"Mon cv",
+      "resumeLink":"cv.pdf",
+
       "link":"Essayez maintenant",
       "section1name":"projets",
       "section2name":"projets personnels",
@@ -207,7 +209,12 @@
     "collage": {
       "name": "Œuvres de Collage",
       "description": "Une sélection de mes œuvres de collage numériques — où textures, fragments et contrastes s’unissent pour raconter des histoires visuelles."
+    },
+    "radio": {
+      "name": "Moodwaves — Ma Bande-Son Pour Coder et Créer",
+      "description": "Une bonne playlist alimente ma concentration et ma créativité. Celle-ci reflète parfaitement l’énergie et l’ambiance qui m’accompagnent quand je code ou que je crée. Plongez dedans, ressentez le flow, et laissez-vous porter par les sons qui nourrissent chaque ligne et chaque pixel."
     }
+    
     
   
   }

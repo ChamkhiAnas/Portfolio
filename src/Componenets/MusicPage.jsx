@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import MusicPlayer from "./MusicPlayer";
+import { useTranslation } from "react-i18next";
 export default function MusicPage(){
 
+
+  const {t,i18n}=useTranslation()
 
 
     const [playlist,setPlaylist] = useState([
@@ -197,12 +200,13 @@ export default function MusicPage(){
         <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
 
             <h1 className="name font-extrabold text-2xl">
-            Moodwaves — The Soundtrack to My Code and art                                                                
+            {t('radio.name')}                                                           
+                                                             
             </h1>
 
             <div className="grid description grid-cols-5">
                 <h4 className="text-xl my-6   font-medium  col-span-5">
-                Great work is powered by great focus, and for me, that comes from the right soundtrack. This playlist captures the energy, flow, and creativity that drive my development process. Dive into experience the vibes that inspire every line of code and every pixel I design.
+                {t('radio.description')}                                                           
                 </h4>
             </div>
 

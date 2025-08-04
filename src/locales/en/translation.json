@@ -5,6 +5,7 @@
       "description2":"For 5 years, I worked remotely with a Z-tech startup in france, creating real estate tools that automate workflows and simplify complex systems.",
       "description3":"Curious by nature, I love solving problems through code, blending design with function, and learning something new every day,currently exploring new adventures where I can build, grow, and leave a meaningful mark.",        
       "resume":"Resume",
+      "resumeLink":"resume.pdf",
       "link":"Try it out",
       "section1name":"projects",
       "section2name":"side projects",
@@ -16,7 +17,7 @@
           "type": " An analysis and decision-support tool designed for real estate professionals.",
           "year": "",
           "link": "immocockpit.fr",
-          "tags": ["Nuxt.js", "Laravel", "Leafletjs", "Mapbox","Apexcharts.js","jsPDF","PostgreSQL","OpenData(APIs REST,GeoJSON)","Nginx","Figma"],
+          "tags": ["Nuxt.js", "Laravel", "Leafletjs", "Mapbox","Apexcharts.js","Laravel-dompdf","PostgreSQL","Tailwind","OpenData(APIs REST,GeoJSON)","Nginx","Figma"],
           "logo": "/immocockpit.svg",
           "isVisitLink": true,
           "status": false,
@@ -36,7 +37,7 @@
             "type": "Smart real estate search",
             "year": "",
             "link": "smartzone.immo",
-            "tags": ["Laravel", "Vue.js", "Vuex", "Leafletjs", "Mapbox","PostgreSQL","OpenData(APIs REST,GeoJSON)","Figma"],
+            "tags": ["Laravel", "Vue.js", "Vuex", "Leafletjs", "Mapbox","PostgreSQL","Tailwind","OpenData(APIs REST,GeoJSON)","Figma"],
             "logo": "/smartzone.svg",
             "isVisitLink": true,
             "status": false,
@@ -57,7 +58,7 @@
           "type": "AI-Powered real estate ad generator",
           "year": "",
           "link": "genimmo.ma",
-          "tags": ["React", "Nest.js","Leafletjs", "Mapbox","MangoDB","Figma","OpenAI"],
+          "tags": ["React", "Nest.js","Leafletjs","Tailwind" ,"Mapbox","MangoDB","Figma","OpenAI"],
           "logo": "/genImmooo.svg",
           "isVisitLink": true,
           "status": false,
@@ -73,7 +74,7 @@
           "type": "French political opinion-based matchmaking voting app",
           "year": "",
           "link": "trouvetondéputé",
-          "tags": ["Nuxt.js","AirTable","Vercel","OpenData(APIs REST,GeoJSON)","Figma"],
+          "tags": ["Nuxt.js","AirTable","Tailwind","Vercel","OpenData(APIs REST)","Figma"],
           "logo": "/trouve.svg",
           "isVisitLink": true,
           "status": false,
@@ -207,6 +208,10 @@
     "collage":{
       "name":"Collage Artworks",
       "description":"A selection of my digital and analog collage artworks—where textures, fragments, and contrasts come together to tell visual stories."
+    },
+    "radio":{
+      "name":"Moodwaves — The Soundtrack to My Code and art",
+      "description":"Great work is powered by great focus, and for me, that comes from the right soundtrack. This playlist captures the energy, flow, and creativity that drive my development process. Dive into experience the vibes that inspire every line of code and every pixel I design."
     }
     
   }
