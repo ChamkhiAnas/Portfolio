@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
-
+import { useTranslation } from "react-i18next"
 export default function CollagePage(){
 
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [modalImageSrc, setModalImageSrc] = useState('')
+
+    const { t,i18n } = useTranslation();
 
     const openModal = (src) => {
         setModalImageSrc(src)
@@ -40,12 +42,12 @@ export default function CollagePage(){
         <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
 
             <h1 className="name font-extrabold text-2xl">
-            Collage Artworks                                                           
+            {t('collage.name')}                                                           
             </h1>
 
             <div className="grid description grid-cols-5">
                 <h4 className="text-xl my-6   font-medium  col-span-5">
-                A selection of my digital and analog collage artworks—where textures, fragments, and contrasts come together to tell visual stories.
+                {t('collage.description')}                                                           
                 </h4>
             </div>
 

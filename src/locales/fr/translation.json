@@ -107,6 +107,108 @@
         }
       ],
       "footer": "PAR"
+    },
+    "ressources": {
+        "name": "Centre de Ressources",
+        "description": "Bienvenue dans mon Centre de Ressources — une collection soigneusement sélectionnée d’outils, d’applications, de guides et de références que j’utilise tout au long de mon processus créatif et de développement. que je conçoive des interfaces élégantes, que je code des systèmes fonctionnels et efficaces, ou que je cherche simplement de l’inspiration, ces ressources font partie de mon quotidien.",
+        "links": [
+          {
+            "name": "Puppeteer (Automatisation de Navigateur Sans Interface)",
+            "description": "Une bibliothèque Node.js pour contrôler Chrome/Chromium afin de réaliser des tâches telles que le scraping, les tests et l’automatisation.",
+            "link": "https://pptr.dev/"
+          },
+          {
+            "name": "Uncut (Ressources de Polices Gratuites)",
+            "description": "Une collection croissante de polices gratuites et de haute qualité, sélectionnées pour les designers et les créatifs.",
+            "link": "https://uncut.wtf/"
+          },
+          {
+            "name": "Fancy Components (Extraits de Composants UI)",
+            "description": "Une collection de composants React et Tailwind magnifiquement conçus et prêts à l'emploi.",
+            "link": "https://www.fancycomponents.dev/"
+          },
+          {
+            "name": "Pulsetic (Surveillance de Disponibilité de Sites Web)",
+            "description": "Une surveillance de disponibilité gratuite et simple avec des pages de statut attrayantes et des alertes instantanées.",
+            "link": "https://pulsetic.com/"
+          },
+          {
+            "name": "Umami (Analyse Respectueuse de la Vie Privée)",
+            "description": "Une solution d'analyse web simple et open-source qui respecte la vie privée des utilisateurs — sans cookies ni suivi abusif.",
+            "link": "https://umami.is/"
+          },
+          {
+            "name": "PDFShift (API HTML vers PDF)",
+            "description": "Une API puissante et facile à utiliser pour convertir des documents HTML en PDF de haute qualité.",
+            "link": "https://pdfshift.io/"
+          },
+          {
+            "name": "Mapbox (Cartes Personnalisables & APIs de Localisation)",
+            "description": "Une plateforme offrant des outils puissants et des APIs pour créer des cartes interactives et esthétiques.",
+            "link": "https://www.mapbox.com/"
+          },
+          {
+            "name": "Leaflet (Cartes Interactives Légères)",
+            "description": "Une bibliothèque JavaScript open-source populaire pour créer des cartes interactives personnalisables et adaptées aux mobiles.",
+            "link": "https://leafletjs.com/"
+          },
+          {
+            "name": "Relume (Outil de Maquettage Automatique)",
+            "description": "Un outil qui génère automatiquement des wireframes et des composants de design pour accélérer votre processus de conception web.",
+            "link": "https://www.relume.io/"
+          },
+          {
+            "name": "Guerrilla Mail (Email Temporaire et Jetable)",
+            "description": "Un service gratuit fournissant des adresses email temporaires et jetables pour protéger votre boîte de réception du spam.",
+            "link": "https://www.guerrillamail.com/fr"
+          },
+          {
+            "name": "Mailtrap (Bac à Sable pour Tests d'Email)",
+            "description": "Un environnement sécurisé pour tester, déboguer et partager des emails sans les envoyer à de vrais utilisateurs.",
+            "link": "https://mailtrap.io/fr/email-sandbox/"
+          },
+          {
+            "name": "Milanote (Espace Visuel pour Créatifs)",
+            "description": "Un outil facile à utiliser pour organiser visuellement des idées, des projets et de l'inspiration.",
+            "link": "https://milanote.com/"
+          },
+          {
+            "name": "Miro (Tableau Blanc Collaboratif en Ligne)",
+            "description": "Une plateforme de tableau blanc numérique polyvalente pour la collaboration d'équipe, le brainstorming et la planification de projets en temps réel.",
+            "link": "https://miro.com"
+          },
+          {
+            "name": "Favicon.io (Générateur de Favicon)",
+            "description": "Un outil simple pour créer des favicons et des icônes d'applications à partir de texte, d'images ou d'emojis en quelques secondes.",
+            "link": "https://favicon.io/favicon-generator/"
+          },
+          {
+            "name": "Obsidian (Application de Prise de Notes en Markdown)",
+            "description": "Une base de connaissances puissante, locale, qui vous aide à organiser et relier vos notes en Markdown.",
+            "link": "https://obsidian.md/"
+          },
+          {
+            "name": "PocketBase (Backend en tant que Service)",
+            "description": "Un backend open-source léger avec base de données en temps réel, authentification et stockage de fichiers.",
+            "link": "https://pocketbase.io/"
+          },
+          {
+            "name": "Are.na (Plateforme de Recherche Visuelle & Collaboration)",
+            "description": "Un outil pour collecter, organiser et partager des idées visuellement via des blocs et des connexions.",
+            "link": "https://www.are.na/"
+          },
+          {
+            "name": "Sheety (Convertir des Tableurs en APIs)",
+            "description": "Un outil qui convertit instantanément les Google Sheets en APIs RESTful pour une intégration et automatisation faciles.",
+            "link": "https://sheety.co/"
+          }
+        ]
+    },
+    "collage": {
+      "name": "Œuvres de Collage",
+      "description": "Une sélection de mes œuvres de collage numériques — où textures, fragments et contrastes s’unissent pour raconter des histoires visuelles."
     }
+    
+  
   }
   
