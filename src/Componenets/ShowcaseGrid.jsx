@@ -22,8 +22,8 @@ export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isV
 
                     <div className="accordion border-b border-dashed border-border border-gray-400 ">
 
-                        <div onClick={showAccordion} className="accordion-displayed py-3 px-2 hover:bg-gray-100 cursor-pointer flex w-full items-center gap-2">
-                            <div className="accordion-logo h-6 w-6 rounded-md"
+                        <div onClick={showAccordion} className="accordion-displayed py-3 px-2  hover:bg-gray-100 cursor-pointer flex w-full lg:items-center gap-2">
+                            <div className="accordion-logo h-6 w-6 mt-2 lg:mt-0 rounded-md"
                                 style={{
                                     backgroundImage: `url(${logo})`,
                                     backgroundSize: 'cover',
@@ -32,10 +32,9 @@ export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isV
                             >
                             </div>
 
-                            <div className="accordion-name cursor-pointer w-full flex items-center gap-2">
-                                <h3 className="text-lg font-semibold">{name}</h3>
+                            <div className="accordion-name cursor-pointer w-full flex flex-col gap-0 lg:flex-row  lg:items-center lg:gap-2">
+                                <h3 className="text-lg font-semibold mb-0">{name}</h3>
                                 <label className='text-md cursor-pointer text-gray-600 font-medium'>{type}</label>
-                                <h6 className='ml-auto text-md text-gray-600 font-semibold'>{year}</h6>
                             </div>
                         </div>
 

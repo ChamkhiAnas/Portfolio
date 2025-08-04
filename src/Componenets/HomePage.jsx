@@ -38,7 +38,7 @@ export default function HomePage(){
     }
 
     return(
-        <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
+        <main className="flex flex-col px-4 sm:px-0 max-w-sm sm:max-w-lg md:max-w-xl  lg:max-w-3xl   mt-10 m-0 m-auto">
 
             <h1 className="name font-extrabold text-2xl">
             {t('home.welcome')} <span className="animate-pulse"></span>                                                               

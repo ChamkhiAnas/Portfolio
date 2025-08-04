@@ -6,11 +6,13 @@ export default function CollagePage(){
     const [modalImageSrc, setModalImageSrc] = useState('')
 
 
+  
+    const { t,i18n } = useTranslation();
+
     useEffect(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
-    const { t,i18n } = useTranslation();
 
     const openModal = (src) => {
         setModalImageSrc(src)
