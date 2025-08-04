@@ -1,13 +1,18 @@
 import './ShowcaseGrid.css'
 import { useTranslation } from 'react-i18next';
 
-export default function ShowcaseGrid({name,type,year,link,tags,logo,isVisitLink,status,description,onShow}){
+export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isVisitLink,status,description,onShow}){
 
     const { t,i18n } = useTranslation();
 
 
     function showAccordion(){
         onShow();
+    }
+
+    function visitLink(){
+        const path = `https://${link}`
+        window.open(path, '_blank');    
     }
 
 
@@ -35,8 +40,7 @@ export default function ShowcaseGrid({name,type,year,link,tags,logo,isVisitLink,
                         </div>
 
                         <div className={`accordion-hidden  px-5 ${status ? 'open py-3' : 'closed'}`}>
-                            <h4 className='accordion-place text-sm font-semibold cursor-pointer underline'>{link}</h4>
-                            {/* <h5 className='accordion-decription text-sm py-1'>{description}</h5> */}
+                            <h4 onClick={()=>visitLink()} className='accordion-place text-sm font-semibold cursor-pointer underline'>{linkName}</h4>
 
                             <h5 className='accordion-description text-sm py-2'>
                                 {description.map((line, i) => {
@@ -60,7 +64,7 @@ export default function ShowcaseGrid({name,type,year,link,tags,logo,isVisitLink,
 
                             {
                                     isVisitLink && 
-                                    <div className='accordion-visit-link ml-auto cursor-pointer'>
+                                    <div onClick={()=>visitLink()} className='accordion-visit-link  cursor-pointer'>
                                         
                                         <label  className='bg-blue-100 flex justify-center items-center hover:bg-blue-200 text-blue-800 cursor-pointer px-3 rounded-sm py-1'>
                                                 <span>{t('home.link')}</span>

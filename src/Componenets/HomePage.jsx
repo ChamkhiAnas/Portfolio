@@ -1,5 +1,4 @@
 import './HomePage.css'
-import InteractiveNoiseBox from "./DotMatrix";
 import ShowcaseGrid from './ShowcaseGrid';
 import ShowcaseTitle from './ShowcaseTitle';
 import Directory from './Directory';
@@ -70,11 +69,6 @@ export default function HomePage(){
 
 
 
-            <div className='rounded-xl' style={{ margin: 0, padding: 0, width: '100%', height: '100', }}>
-            <InteractiveNoiseBox></InteractiveNoiseBox>
-            </div>
-
-
             
             <ShowcaseTitle title={t('home.section1name')} isButton={true}></ShowcaseTitle>
 
@@ -99,7 +93,7 @@ export default function HomePage(){
 
             {
                 directory.map((item,index)=>(
-                    <Directory key={index} {...item}></Directory>
+                    <Directory  key={index} navigationType={"internal"} {...item}></Directory>
                 ))
             }
             </div>

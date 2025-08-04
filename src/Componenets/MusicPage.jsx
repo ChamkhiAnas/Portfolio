@@ -2,10 +2,19 @@ import { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import MusicPlayer from "./MusicPlayer";
 import { useTranslation } from "react-i18next";
+
 export default function MusicPage(){
 
 
   const {t,i18n}=useTranslation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+
+
+
 
 
     const [playlist,setPlaylist] = useState([
@@ -138,7 +147,11 @@ export default function MusicPage(){
         },
       ]);
 
+
+
+
      
+
       
 
       const [currentIndex, setCurrentIndex] = useState(0);

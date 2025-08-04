@@ -17,6 +17,7 @@
           "type": " An analysis and decision-support tool designed for real estate professionals.",
           "year": "",
           "link": "immocockpit.fr",
+          "linkName": "immocockpit.fr",
           "tags": ["Nuxt.js", "Laravel", "Leafletjs", "Mapbox","Apexcharts.js","Laravel-dompdf","PostgreSQL","Tailwind","OpenData(APIs REST,GeoJSON)","Nginx","Figma"],
           "logo": "/immocockpit.svg",
           "isVisitLink": true,
@@ -37,6 +38,7 @@
             "type": "Smart real estate search",
             "year": "",
             "link": "smartzone.immo",
+            "linkName": "smartzone.immo",
             "tags": ["Laravel", "Vue.js", "Vuex", "Leafletjs", "Mapbox","PostgreSQL","Tailwind","OpenData(APIs REST,GeoJSON)","Figma"],
             "logo": "/smartzone.svg",
             "isVisitLink": true,
@@ -58,6 +60,7 @@
           "type": "AI-Powered real estate ad generator",
           "year": "",
           "link": "genimmo.ma",
+          "linkName": "genimmo.ma",
           "tags": ["React", "Nest.js","Leafletjs","Tailwind" ,"Mapbox","MangoDB","Figma","OpenAI"],
           "logo": "/genImmooo.svg",
           "isVisitLink": true,
@@ -73,7 +76,8 @@
           "name": "TrouveTonDéputé",
           "type": "French political opinion-based matchmaking voting app",
           "year": "",
-          "link": "trouvetondéputé",
+          "link": "trouvetondepute-git-master-chamkhianas-projects.vercel.app/",
+          "linkName": "trouvetondéputé",
           "tags": ["Nuxt.js","AirTable","Tailwind","Vercel","OpenData(APIs REST)","Figma"],
           "logo": "/trouve.svg",
           "isVisitLink": true,
@@ -88,17 +92,17 @@
         {
             "name":"Collage Artworks",
             "description":"When I'm not coding, I'm cutting and layering. code is my craft, but art is my escape. View my collage works",
-            "link":""
+            "link":"/collage"
         },
         {
             "name":"Resources",
             "description":"A handpicked list of tools and guides that fuel my creative and coding workflow",
-            "link":""
+            "link":"/ressources"
         },
         {
             "name":"Moodwaves",
             "description":"Music fuels my flow—here's what’s playing in my ears when I’m building cool stuff",
-            "link":""
+            "link":"/radio"
         }      
       ],
       "footer": "BY"

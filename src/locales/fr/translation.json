@@ -19,6 +19,7 @@
           "type": "Outil d’analyse et d’aide à la décision conçu pour les professionnels de l’immobilier.",
           "year": "",
           "link": "immocockpit.fr",
+          "linkName": "immocockpit.fr",
           "tags": ["Nuxt.js", "Laravel", "Leafletjs", "Mapbox","Apexcharts.js","jsPDF","PostgreSQL","OpenData(APIs REST,GeoJSON)","Nginx","Figma"],
           "logo": "/immocockpit.svg",
           "isVisitLink": true,
@@ -38,6 +39,8 @@
           "type": "Recherche immobilière intelligente",
           "year": "",
           "link": "smartzone.immo",
+          "linkName": "smartzone.immo",
+
           "tags": ["Laravel", "Vue.js", "Vuex", "Leafletjs", "Mapbox","PostgreSQL","OpenData(APIs REST,GeoJSON)","Figma"],
           "logo": "/smartzone.svg",
           "isVisitLink": true,
@@ -60,6 +63,7 @@
           "type": "Générateur d’annonces immobilières  par IA",
           "year": "",
           "link": "genimmo.ma",
+          "linkName":"genimmo.ma",
           "tags": ["React", "Nest.js","Leafletjs", "Mapbox","MangoDB","Figma","OpenAI"],
           "logo": "/genImmooo.svg",
           "isVisitLink": true,
@@ -75,7 +79,8 @@
           "name": "TrouveTonDéputé",
           "type": "Application de matching politique basée sur l’opinion pour les élections françaises",
           "year": "",
-          "link": "trouvetondéputé",
+          "link": "trouvetondepute-git-master-chamkhianas-projects.vercel.app/",
+          "linkName":"TrouveTonDéputé",
           "tags": ["Nuxt.js","AirTable","Vercel","OpenData(APIs REST,GeoJSON)","Figma"],
           "logo": "/trouve.svg",
           "isVisitLink": true,
@@ -95,17 +100,17 @@
         {
           "name": "Collages",
           "description": "Quand je ne code pas, je crée des collages en découpant et superposant des images. Découvrez mes œuvres.",
-          "link": ""
+          "link":"/collage"
         },
         {
           "name": "Ressources",
           "description": "Une sélection d’outils et de guides essentiels qui nourrissent ma créativité et mon travail de développement.",
-          "link": ""
+          "link":"/ressources"
         },
         {
           "name": "Moodwaves",
           "description": "La musique qui m’accompagne et nourrit mon inspiration quand je code mes projets.",
-          "link": ""
+          "link":"/radio"
         }
       ],
       "footer": "PAR"

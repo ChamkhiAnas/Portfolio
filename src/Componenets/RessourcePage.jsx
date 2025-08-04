@@ -7,6 +7,10 @@ export default function RessourcePage(){
     const { t,i18n } = useTranslation();
 
 
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+
     const [ressources,setRessources]=useState(t('ressources.links', { returnObjects: true }))
 
     useEffect(() => {
