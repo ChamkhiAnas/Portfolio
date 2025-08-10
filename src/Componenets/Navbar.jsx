@@ -50,7 +50,7 @@ export default function Navbar(){
     console.log("leftEye",leftEye)
     console.log("rightEye",rightEye)
     
-    const tl = gsap.timeline({ repeat: 5,repeatDelay: 1 });
+    const tl = gsap.timeline({ repeat: 3,repeatDelay: 1 });
 
     paths.forEach((path) => {
       path.style.fill = "none";
