@@ -18,7 +18,7 @@ export default function RessourcePage(){
       }, [i18n.language, t]);  
 
     return(
-        <main className="flex flex-col max-w-3xl m-0 m-auto mt-10">
+        <main className="flex flex-col  px-4 sm:px-0 m-0 m-auto  max-w-sm sm:max-w-lg md:max-w-xl  lg:max-w-3xl mt-10">
 
             <h1 className="name font-extrabold text-2xl">
             {t('ressources.name')}                                                               
