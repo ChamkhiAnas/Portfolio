@@ -44,11 +44,24 @@ export default function Navbar(){
 
   useGSAP(() => {
     const paths = container.current.querySelectorAll(".draw-path");
+    const leftEye =container.current.querySelector("#leftEye")
+    const rightEye =container.current.querySelector("#rightEye")
+
+    console.log("leftEye",leftEye)
+    console.log("rightEye",rightEye)
+    
+    const tl = gsap.timeline({ repeat: 5,repeatDelay: 1 });
 
     paths.forEach((path) => {
       path.style.fill = "none";
       path.style.stroke = "none"; 
     });
+
+    tl.to(rightEye, {opacity: 0, duration: 0.4, ease: "power1.inOut"})
+    .to(leftEye, { opacity: 0, duration: 0.4, ease: "power1.inOut" }) 
+    .to(rightEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
+
+  
 
     gsap.to(paths, {
       fill: "#000",          
@@ -57,6 +70,10 @@ export default function Navbar(){
       stagger: 0.1         
     });
 
+    tl.to(leftEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
+    .to(rightEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
+
+ 
   }, { scope: container });
 
 
@@ -158,13 +175,13 @@ export default function Navbar(){
                     -237 37 -35 89 -39 269 -21 266 26 381 29 545 17 122 -10 174 -19 243 -42 139
                     -46 234 -94 305 -155 l66 -56 10 28 c12 37 -8 145 -39 210 -32 65 -140 170
                     -226 217 -108 61 -187 75 -431 81 -131 3 -283 -1 -395 -9z"/>
-                    <path className="draw-path" d="M3824 6280 c-73 -13 -174 -52 -240 -91 -111 -67 -235 -200 -223 -238
+                    <path className="draw-path"  id="leftEye" d="M3824 6280 c-73 -13 -174 -52 -240 -91 -111 -67 -235 -200 -223 -238
                     2 -6 42 12 89 40 108 66 214 116 263 125 l37 6 0 -48 c0 -103 36 -166 115
                     -203 155 -73 313 36 303 209 -1 33 1 60 5 60 22 0 77 -39 149 -106 43 -41 85
                     -74 92 -74 19 0 27 40 17 78 -26 89 -135 186 -250 223 -75 24 -271 34 -357 19z
-                    m246 -155 c17 -20 5 -45 -20 -45 -11 0 -23 7 -26 15 -6 15 11 45 26 45 4 0 13
-                    -7 20 -15z"/>
-                    <path className="draw-path" d="M5955 6265 c-171 -32 -286 -108 -349 -232 -17 -35 -21 -73 -7 -73 5
+                    m246 -155 c17 -20 5 -45 -20 -45 -11  0 -23 7 -26 15 -6 15 11 45 26 45 4 0 13
+                    -7 20 -15z"/> 
+                    <path className="draw-pat" id="rightEye" d="M5955 6265 c-171 -32 -286 -108 -349 -232 -17 -35 -21 -73 -7 -73 5
                     0 44 25 87 55 94 65 160 102 194 106 24 4 25 1 32 -58 9 -79 37 -144 74 -170
                     99 -69 241 -53 298 34 32 50 49 118 42 165 -5 28 -3 38 7 38 26 0 177 -80 256
                     -135 45 -31 81 -53 82 -48 3 25 -5 71 -16 93 -43 82 -229 195 -371 225 -84 18
