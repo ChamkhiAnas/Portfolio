@@ -1,9 +1,21 @@
 import './ShowcaseGrid.css'
 import { useTranslation } from 'react-i18next';
+import ScrambleIn from "../Componenets/Animation/scramble-in"
+import { useEffect, useRef } from 'react';
 
 export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isVisitLink,status,description,onShow}){
 
     const { t,i18n } = useTranslation();
+
+    const scrambleRef = useRef(null)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          scrambleRef.current?.start()
+        }, 3500)
+    
+        return () => clearTimeout(timer)
+      }, [])
 
 
     function showAccordion(){
@@ -34,8 +46,16 @@ export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isV
 
                             <div className="accordion-name cursor-pointer w-full flex flex-col gap-0 lg:flex-row  lg:items-center lg:gap-2">
                                 <h3 className="text-lg font-semibold mb-0">{name}</h3>
-                                <label className='text-md cursor-pointer text-gray-600 font-medium'>{type}</label>
+                                <ScrambleIn
+                                    ref={scrambleRef}
+                                    text={type}
+                                    scrambleSpeed={15}
+                                    scrambledLetterCount={8}
+                                    autoStart={false}
+                                />
+
                             </div>
+
                         </div>
 
                         <div className={`accordion-hidden  px-5 ${status ? 'open py-3' : 'closed'}`}>
