@@ -1,6 +1,15 @@
 {
     "home": {
-      "welcome": "👋 SALUT, JE SUIS ANAS CHAMKHI.",
+      "salutation":[
+        "HEY 😎",
+        "SALUT 👋",
+        "HOLA 🌞",
+        "ПРИВЕТ 🐻",
+        "こんにちは ✽",
+        "MERHABA ✨",
+        "CIAO 🖐️"
+      ],    
+      "welcome": ", JE SUIS ANAS CHAMKHI.",
       "description1": "Développeur web et passionné de technologie, je crée des expériences digitales intuitives — transformant les idées en produits web rapides, fonctionnels et esthétiques, étape par étape.",
       "description2": "Pendant 5 ans, j'ai travaillé à distance avec la startup z-tech en France, développant des outils immobiliers qui automatisent les processus et simplifient les systèmes complexes.",
       "description3": "Curieux de nature, j’aime résoudre des problèmes avec du code, allier design et fonctionnalité, et apprendre chaque jour. Je suis aujourd’hui à la recherche de nouvelles aventures où créer, évoluer et laisser ma trace.",

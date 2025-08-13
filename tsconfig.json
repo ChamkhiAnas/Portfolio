@@ -1,0 +1,4 @@
+{
+    "extends": "./my-react-router-app/tsconfig.json"
+  }
+  

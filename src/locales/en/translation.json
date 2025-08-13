@@ -1,6 +1,15 @@
 {
     "home": {
-      "welcome": "👋 HEY I'M ANAS CHAMKHI.",
+      "salutation":[
+        "HEY 😎",
+        "SALUT 👋",
+        "HOLA 🌞",
+        "ПРИВЕТ 🐻",
+        "こんにちは ✽",
+        "MERHABA ✨",
+        "CIAO 🖐️"
+      ],    
+      "welcome": ", I'M ANAS CHAMKHI.",
       "description1": "I'm a web developer and tech enthusiast passionate about crafting intuitive digital experiences — turning ideas into fast, functional, and visually engaging web products, one line of code at a time",
       "description2":"For 5 years, I worked remotely with a Z-tech startup in france, creating real estate tools that automate workflows and simplify complex systems.",
       "description3":"Curious by nature, I love solving problems through code, blending design with function, and learning something new every day,currently exploring new adventures where I can build, grow, and leave a meaningful mark.",        

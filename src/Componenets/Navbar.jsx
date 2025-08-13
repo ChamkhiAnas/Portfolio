@@ -50,18 +50,18 @@ export default function Navbar(){
     console.log("leftEye",leftEye)
     console.log("rightEye",rightEye)
     
-    const tl = gsap.timeline({ repeat: 2,repeatDelay: 0.5 });
+    // const tl = gsap.timeline({ repeat: 2,repeatDelay: 0.5 });
 
     paths.forEach((path) => {
       path.style.fill = "none";
       path.style.stroke = "none"; 
     });
 
-    tl.to(rightEye, {opacity: 0, duration: 0.4, ease: "power1.inOut"})
-    .to(leftEye, { opacity: 0, duration: 0.4, ease: "power1.inOut" }) 
-    .to(rightEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
-
-  
+    // tl.to(rightEye, {opacity: 0, duration: 0.4, ease: "power1.inOut"})
+    // .to(leftEye, { opacity: 0, duration: 0.4, ease: "power1.inOut" }) 
+    // .to(rightEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
+    // tl.to(leftEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
+    // .to(rightEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
 
     gsap.to(paths, {
       fill: "#000",          
@@ -70,8 +70,6 @@ export default function Navbar(){
       stagger: 0.1         
     });
 
-    tl.to(leftEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
-    .to(rightEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
 
  
   }, { scope: container });
