@@ -9,8 +9,6 @@ export default function ShowcaseTitle({title,isButton}){
     const { t,i18n } = useTranslation();
 
 
-
-
     function openResume(){
         const pdfPath = t('home.resumeLink')
         window.open(pdfPath, '_blank');      
@@ -20,8 +18,10 @@ export default function ShowcaseTitle({title,isButton}){
         <div className="section-name mt-8 border-b border-dashed border-border border-gray-400 py-4 flex">
 
         <motion.div
-          layout
-          animate={{ opacity: [0, 1, 1], y: [10, 10, 0] }}
+          initial={{ opacity: 1, y: 0 }} 
+          whileHover={{
+            opacity: 1,
+          }}
           transition={{
             duration: 0.3,
             ease: "circInOut",

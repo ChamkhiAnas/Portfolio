@@ -20,8 +20,6 @@ export default function HomePage(){
     const [sideProjects,setSideProjects]=useState(t('home.sideProjects', { returnObjects: true }))
     const [directory,setDirectory]=useState(t('home.directory', { returnObjects: true }))
     const [salutation,setSalutation]=useState(t('home.salutation', { returnObjects: true }))
-    const [showSecond, setShowSecond] = useState(false);
-    const [showThird, setShowThird] = useState(false);
 
 
     
@@ -54,10 +52,10 @@ export default function HomePage(){
     return(
         <main className="flex flex-col px-4 sm:px-0 max-w-sm sm:max-w-lg md:max-w-xl  lg:max-w-3xl   mt-10 m-0 m-auto">
             <LayoutGroup>
-                <motion.p className="name flex gap-2 font-extrabold text-2xl" layout>
+                <motion.p className="name flex flex-wrap sm:gap-2 font-extrabold text-xl md:text-2xl" layout>
                 <TextRotate
                     texts={salutation}
-                    mainClassName="overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center "
+                    mainClassName="overflow-hidden py-0.5 sm:py-1 md:py-2 sm:justify-center "
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
@@ -94,7 +92,6 @@ export default function HomePage(){
                     damping: 20,    
                     mass: 0.5    ,          
                     }}
-                    onComplete={() => setShowSecond(true)}
                 >
                     {t('home.description1')}
                 </VerticalCutReveal>

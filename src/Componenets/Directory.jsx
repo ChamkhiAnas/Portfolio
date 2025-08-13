@@ -1,11 +1,29 @@
 import './Directory.css'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from "react-router";
+import { motion } from "motion/react"
+import ScrambleHover from "../Componenets/Animation/scramble-hover"
+import ScrambleIn from "../Componenets/Animation/scramble-in"
+
+
+
 
 export default function Directory({name,description,link,navigationType}){
 
-const [isHovering,setIsHovering]=useState(false)
-let navigate = useNavigate();
+    const [isHovering,setIsHovering]=useState(false)
+    let navigate = useNavigate();
+
+    const scrambleRef = useRef(null)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+        scrambleRef.current?.start()
+        }, 3000)
+
+        return () => clearTimeout(timer)
+    }, [])
+
+
 
     function Navigate(){
         navigationType=="internal" ? navigate(link) : window.open(link, '_blank');   
@@ -16,8 +34,38 @@ let navigate = useNavigate();
 
 
             <div   className={`py-4 px-4`}>
-                <h1 className="text-xl font-semibold">{name}</h1>
-                <p className="py-1 text-md cursor-pointer text-gray-600 font-medium">{description}</p>
+                {/* <h1 className="text-xl font-semibold">{name}</h1> */}
+                <motion.div
+                initial={{ opacity: 1, y: 0 }} 
+                whileHover={{
+                    opacity: 1,
+                }}
+                transition={{
+                    duration: 0.3,
+                    ease: "circInOut",
+                    delay: 0.08,
+                    times: [0, 0.2, 1],
+                }}
+                >
+                <ScrambleHover
+                    text={name}
+                    scrambleSpeed={30}
+                    maxIterations={10}
+                    useOriginalCharsOnly={false}
+                    className="cursor-pointer text-xl font-semibold"
+                />
+                </motion.div>
+
+                <ScrambleIn
+                ref={scrambleRef}
+                text={description}
+                scrambleSpeed={8}
+                scrambledLetterCount={8}
+                autoStart={false}
+                />
+
+              
+                {/* <p className="py-1 text-md cursor-pointer text-gray-600 font-medium">{description}</p> */}
             </div>
 
 

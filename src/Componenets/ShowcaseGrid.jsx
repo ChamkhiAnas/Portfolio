@@ -12,7 +12,7 @@ export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isV
     useEffect(() => {
         const timer = setTimeout(() => {
           scrambleRef.current?.start()
-        }, 3500)
+        }, 3000)
     
         return () => clearTimeout(timer)
       }, [])
