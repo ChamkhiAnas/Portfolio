@@ -1,6 +1,8 @@
 
 import './ShowcaseTitle.css'
 import { useTranslation } from 'react-i18next';
+import { motion } from "motion/react"
+import ScrambleHover from "../Componenets/Animation/scramble-hover"
 
 
 export default function ShowcaseTitle({title,isButton}){
@@ -16,7 +18,25 @@ export default function ShowcaseTitle({title,isButton}){
 
     return(
         <div className="section-name mt-8 border-b border-dashed border-border border-gray-400 py-4 flex">
-        <h6 className="uppercase font-medium text-lg">{title}</h6>
+
+        <motion.div
+          layout
+          animate={{ opacity: [0, 1, 1], y: [10, 10, 0] }}
+          transition={{
+            duration: 0.3,
+            ease: "circInOut",
+            delay: 0.08,
+            times: [0, 0.2, 1],
+          }}
+        >
+          <ScrambleHover
+            text={title}
+            scrambleSpeed={50}
+            maxIterations={8}
+            useOriginalCharsOnly={true}
+            className="cursor-pointer uppercase font-medium text-lg"
+          />
+        </motion.div>
         
         {
         isButton &&

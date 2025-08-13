@@ -8,6 +8,9 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 
 import TextRotate from "../Componenets/Animation/text-rotate"
+import VerticalCutReveal from "../Componenets/Animation/vertical-cut-reveal"
+
+
 
 export default function HomePage(){
 
@@ -17,6 +20,11 @@ export default function HomePage(){
     const [sideProjects,setSideProjects]=useState(t('home.sideProjects', { returnObjects: true }))
     const [directory,setDirectory]=useState(t('home.directory', { returnObjects: true }))
     const [salutation,setSalutation]=useState(t('home.salutation', { returnObjects: true }))
+    const [showSecond, setShowSecond] = useState(false);
+    const [showThird, setShowThird] = useState(false);
+
+
+    
 
     console.log("salutation",salutation)
 
@@ -49,7 +57,7 @@ export default function HomePage(){
                 <motion.p className="name flex gap-2 font-extrabold text-2xl" layout>
                 <TextRotate
                     texts={salutation}
-                    mainClassName="px-2 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center "
+                    mainClassName="overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center "
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
@@ -73,18 +81,61 @@ export default function HomePage(){
 
             <div className="description">
 
-                <ul className='my-4 grid'>
+                <ul className='my-4 grid gap-4'>
 
-                <li className="text-xl  py-1 font-medium  col-span-5">
+                <VerticalCutReveal
+                    splitBy="words"
+                    staggerDuration={0.025}
+                    staggerFrom="first"
+                    wordLevelClassName="text-xl chapter font-medium"
+                    transition={{
+                    type: "spring",
+                    stiffness: 300, 
+                    damping: 20,    
+                    mass: 0.5    ,          
+                    }}
+                    onComplete={() => setShowSecond(true)}
+                >
                     {t('home.description1')}
-                </li>
-                <li className="text-xl  py-1  font-medium  col-span-5">
-                    {t('home.description2')}
-                </li>
-                <li className="text-xl  py-1  font-medium  col-span-5">
-                    {t('home.description3')}
-                </li>
+                </VerticalCutReveal>
 
+
+                <VerticalCutReveal
+                    splitBy="words"
+                    staggerDuration={0.025}
+                    staggerFrom="first"
+                    reverse={true}
+                    wordLevelClassName="text-xl chapter font-medium"
+                    transition={{
+                    type: "spring",
+                    stiffness: 300, 
+                    damping: 20,    
+                    mass: 0.5  ,  
+                    delay: 0.9,
+                    }}
+                    onComplete={() => setShowThird(true)}
+
+                >
+                    {t('home.description2')}
+                </VerticalCutReveal>
+
+                <VerticalCutReveal
+                    splitBy="words"
+                    staggerDuration={0.025}
+                    staggerFrom="first"
+                    reverse={false}
+                    wordLevelClassName="text-xl chapter font-medium"
+                    transition={{
+                    type: "spring",
+                    stiffness: 300, 
+                    damping: 20,    
+                    mass: 0.5,
+                    delay: 1.8,    
+                    }}
+
+                >
+                    {t('home.description3')}
+                </VerticalCutReveal>
 
                 </ul>
                
