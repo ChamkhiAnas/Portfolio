@@ -29,24 +29,24 @@ export default function CollagePage(){
         setModalImageSrc('')
       }
       const collageItems = [
-        { src: '/collage18.gif', depth: 0.5, top: "90%", right: "50%" },
-        { src: '/collage19.gif', depth: 1, top: "10%", right: "25%" },
-        // { src: '/collage17.gif', depth: 2, top: "2%", left: "45%" },
-        // { src: '/collage15.gif', depth: 1, top: "0%", left: "70%" },
-        // { src: '/collage6.jpg', depth: 0.8, top: "20%", left: "15%" },
-        // { src: '/collage7.jpg', depth: 1.2, top: "18%", left: "35%" },
-        // { src: '/collage8.jpg', depth: 1.5, top: "12%", left: "55%" },
-        // { src: '/collage9.jpg', depth: 1, top: "25%", left: "80%" },
-        // { src: '/collage10.jpg', depth: 0.6, top: "35%", left: "5%" },
-        // { src: '/collage11.jpg', depth: 1.3, top: "32%", left: "30%" },
-        // { src: '/collage12.jpg', depth: 1.1, top: "28%", left: "50%" },
-        // { src: '/collage13.jpg', depth: 0.9, top: "40%", left: "70%" },
-        // { src: '/collage14.jpg', depth: 1.4, top: "50%", left: "10%" },
-        // { src: '/collage15.jpg', depth: 0.7, top: "48%", left: "35%" },
-        // { src: '/collage1.jpg', depth: 1.2, top: "52%", left: "55%" },
-        // { src: '/collage2.jpg', depth: 1, top: "45%", left: "80%" },
-        // { src: '/collage3.jpg', depth: 0.5, top: "65%", left: "25%" },
-        // { src: '/collage4.jpg', depth: 1.3, top: "60%", left: "60%" },
+        { src: '/collage18.gif', depth: -0.5, top: "0%", right: "1%",left:"unset" },
+        { src: '/collage19.gif', depth: -1, top: "0%", left: "1%",right:"unset" },
+        { src: '/collage17.gif', depth: 0.5, top: "0%", right: "1%",left:"unset" },
+        { src: '/collage15.gif',  depth: 1, top: "0%", left: "1%",right:"unset"  },
+        { src: '/collage6.jpg', depth: -2, top: "0%", right: "1%",left:"unset" },
+        { src: '/collage7.jpg', depth: -0.2, top: "0%", left: "1%",right:"unset"  },
+        { src: '/collage8.jpg', depth: -1, top: "0%", right: "1%",left:"unset"  },
+        { src: '/collage9.jpg', depth: 2.2, top: "0%", left: "1%",right:"unset" },
+        { src: '/collage10.jpg', depth: 0.9, top: "0%", right: "1%",left:"unset"   },
+        { src: '/collage11.jpg', depth: 1.2, top: "0%", left: "1%",right:"unset" },
+        { src: '/collage12.jpg', depth: 0.4, top: "0%", right: "1%",left:"unset" },
+        { src: '/collage13.jpg', depth: -1.2, top: "0%", left: "1%",right:"unset"},
+        { src: '/collage14.jpg', depth: 1, top: "0%", right: "1%",left:"unset"  },
+        { src: '/collage15.jpg', depth: 1.2, top: "0%", left: "1%",right:"unset"},
+        { src: '/collage1.jpg', depth: 1, top: "0%", right: "1%",left:"unset"  },
+        { src: '/collage2.jpg', depth:-1, top: "0%", left: "1%",right:"unset" },
+        { src: '/collage3.jpg', depth: 3, top: "0%", right: "1%",left:"unset"  },
+        { src: '/collage4.jpg', depth: 1, top: "0%", left: "1%",right:"unset"},
       ];
       
     
@@ -64,7 +64,9 @@ export default function CollagePage(){
       }, [isModalOpen])
 
     return(
-        <main className="flex flex-col relative px-4 sm:px-0 m-0 m-auto  max-w-sm sm:max-w-lg md:max-w-xl  lg:max-w-3xl mt-10">
+
+      <>
+        <main className="flex flex-col z-10 relative px-4 sm:px-0 m-0 m-auto  max-w-sm sm:max-w-lg md:max-w-xl  lg:max-w-3xl mt-10">
 
             <h1 className="name font-extrabold text-2xl">
             {t('collage.name')}                                                           
@@ -88,40 +90,21 @@ export default function CollagePage(){
             </div>
 
 
-            {/* <div className="grid grid-cols-4 gap-4 my-2">
+          <div className="grid grid-cols-4 lg:hidden gap-4 my-2">
 
-                {collageImages.map((src, index) => (
+                {collageItems.map((item, index) => (
                 <img
                     key={index}
-                    src={src}
+                    src={item.src}
                     className="cursor-pointer hover:opacity-80 transition-opacity"
                     width={800}
                     height={800}
                     loading="lazy"
-                    onClick={() => openModal(src)}
+                    onClick={() => openModal(item.src)}
                 />
                 ))}
-            </div> */}
+            </div> 
 
-            <Floating sensitivity={-1} className="relative w-full h-[80vh] overflow-visible">
-              {collageItems.map((item, index) => (
-                <FloatingElement
-                  key={index}
-                  depth={item.depth}
-                  className={`top-[${item.top}] left-[${item.left}]`}
-                >
-                  <motion.img
-                    initial={{ opacity: 1 }}
-                    src={item.src}
-                    className="cursor-pointer hover:opacity-80 transition-opacity"
-                    width={400}
-                    height={400}
-                    loading="lazy"
-                    onClick={() => openModal(item.src)}
-                  />
-                </FloatingElement>
-              ))}
-            </Floating>
 
 
 
@@ -147,5 +130,38 @@ export default function CollagePage(){
             )}
 
         </main>
+
+        <div className="hidden max-w-ld lg:block -z-10 sm:max-w-xl md:max-w-2xl  lg:max-w-4xl m-0 m-auto">
+
+        <Floating sensitivity={-3} easingFactor={0.05} className="flex gap-4 flex-wrap">
+              {collageItems.map((item, index) => (
+                <FloatingElement
+                  key={index}
+                  depth={item.depth}
+                  className=""
+                  style={{
+                    top: item.top,
+                    left: item.left,
+                    right: item.right,
+
+                  }}
+                >
+                  <motion.img
+                    initial={{ opacity: 1 }}
+                    src={item.src}
+                    className="cursor-pointer hover:opacity-80 transition-opacity"
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    onClick={() => openModal(item.src)}
+                  />
+                </FloatingElement>
+              ))}
+            </Floating>
+
+            </div>
+
+
+        </>
     )
 }

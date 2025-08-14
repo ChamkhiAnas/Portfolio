@@ -87,7 +87,7 @@ const Floating = ({
     <FloatingContext.Provider value={{ registerElement, unregisterElement }}>
       <div
         ref={containerRef}
-        className={cn("absolute top-0 left-0 w-full h-full", className)}
+        className={cn("top-0 left-0 w-full h-full", className)}
         {...props}
       >
         {children}
@@ -102,11 +102,13 @@ interface FloatingElementProps {
   children: ReactNode
   className?: string
   depth?: number
+  style?: React.CSSProperties
 }
 
 export const FloatingElement = ({
   children,
   className,
+  style,
   depth = 1,
 }: FloatingElementProps) => {
   const elementRef = useRef<HTMLDivElement>(null)
@@ -125,7 +127,8 @@ export const FloatingElement = ({
   return (
     <div
       ref={elementRef}
-      className={cn("absolute will-change-transform", className)}
+      style={style}
+      className={cn(" will-change-transform", className)}
     >
       {children}
     </div>
