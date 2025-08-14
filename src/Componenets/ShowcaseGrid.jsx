@@ -6,15 +6,6 @@ export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isV
 
     const { t,i18n } = useTranslation();
 
-    // const scrambleRef = useRef(null)
-
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //       scrambleRef.current?.start()
-    //     }, 3000)
-    
-    //     return () => clearTimeout(timer)
-    //   }, [])
 
 
     function showAccordion(){

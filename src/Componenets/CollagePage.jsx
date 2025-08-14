@@ -29,24 +29,20 @@ export default function CollagePage(){
         setModalImageSrc('')
       }
       const collageItems = [
-        { src: '/collage18.gif', depth: -0.5, top: "0%", right: "1%",left:"unset" },
-        { src: '/collage19.gif', depth: -1, top: "0%", left: "1%",right:"unset" },
-        { src: '/collage17.gif', depth: 0.5, top: "0%", right: "1%",left:"unset" },
-        { src: '/collage15.gif',  depth: 1, top: "0%", left: "1%",right:"unset"  },
-        { src: '/collage6.jpg', depth: -2, top: "0%", right: "1%",left:"unset" },
-        { src: '/collage7.jpg', depth: -0.2, top: "0%", left: "1%",right:"unset"  },
-        { src: '/collage8.jpg', depth: -1, top: "0%", right: "1%",left:"unset"  },
-        { src: '/collage9.jpg', depth: 2.2, top: "0%", left: "1%",right:"unset" },
-        { src: '/collage10.jpg', depth: 0.9, top: "0%", right: "1%",left:"unset"   },
-        { src: '/collage11.jpg', depth: 1.2, top: "0%", left: "1%",right:"unset" },
-        { src: '/collage12.jpg', depth: 0.4, top: "0%", right: "1%",left:"unset" },
-        { src: '/collage13.jpg', depth: -1.2, top: "0%", left: "1%",right:"unset"},
-        { src: '/collage14.jpg', depth: 1, top: "0%", right: "1%",left:"unset"  },
-        { src: '/collage15.jpg', depth: 1.2, top: "0%", left: "1%",right:"unset"},
-        { src: '/collage1.jpg', depth: 1, top: "0%", right: "1%",left:"unset"  },
-        { src: '/collage2.jpg', depth:-1, top: "0%", left: "1%",right:"unset" },
-        { src: '/collage3.jpg', depth: 3, top: "0%", right: "1%",left:"unset"  },
-        { src: '/collage4.jpg', depth: 1, top: "0%", left: "1%",right:"unset"},
+        { src: '/collage6.webp', depth: -2, top: "0%", right: "1%",left:"unset" },
+        { src: '/collage7.webp', depth: -0.2, top: "0%", left: "1%",right:"unset"  },
+        { src: '/collage8.webp', depth: -1, top: "0%", right: "1%",left:"unset"  },
+        { src: '/collage9.webp', depth: 2.2, top: "0%", left: "1%",right:"unset" },
+        { src: '/collage10.webp', depth: 0.9, top: "0%", right: "1%",left:"unset"   },
+        { src: '/collage11.webp', depth: 1.2, top: "0%", left: "1%",right:"unset" },
+        { src: '/collage12.webp', depth: 0.4, top: "0%", right: "1%",left:"unset" },
+        { src: '/collage13.webp', depth: -1.2, top: "0%", left: "1%",right:"unset"},
+        { src: '/collage14.webp', depth: 1, top: "0%", right: "1%",left:"unset"  },
+        { src: '/collage15.webp', depth: 1.2, top: "0%", left: "1%",right:"unset"},
+        { src: '/collage1.webp', depth: 1, top: "0%", right: "1%",left:"unset"  },
+        { src: '/collage2.webp', depth:-1, top: "0%", left: "1%",right:"unset" },
+        { src: '/collage3.webp', depth: 3, top: "0%", right: "1%",left:"unset"  },
+        { src: '/collage4.webp', depth: 1, top: "0%", left: "1%",right:"unset"},
       ];
       
     

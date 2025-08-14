@@ -5,6 +5,7 @@ import HomePage from "../Componenets/HomePage";
 import CollagePage from "../Componenets/CollagePage";
 import RessourcePage from "../Componenets/RessourcePage";
 import MusicPage from "../Componenets/MusicPage";
+import NotFoundPage from "../Componenets/NotFoundPage";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -21,9 +22,10 @@ const routes = createBrowserRouter(
 
         <Route path="/radio" element={<MusicPage/>}/>
 
-
-
       </Route>
+
+      <Route path="*" element={<NotFoundPage/>}/>
+
     </>
     )
   );
