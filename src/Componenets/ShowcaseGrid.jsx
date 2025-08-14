@@ -1,21 +1,20 @@
 import './ShowcaseGrid.css'
 import { useTranslation } from 'react-i18next';
 import ScrambleIn from "../Componenets/Animation/scramble-in"
-import { useEffect, useRef } from 'react';
 
 export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isVisitLink,status,description,onShow}){
 
     const { t,i18n } = useTranslation();
 
-    const scrambleRef = useRef(null)
+    // const scrambleRef = useRef(null)
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-          scrambleRef.current?.start()
-        }, 3000)
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //       scrambleRef.current?.start()
+    //     }, 3000)
     
-        return () => clearTimeout(timer)
-      }, [])
+    //     return () => clearTimeout(timer)
+    //   }, [])
 
 
     function showAccordion(){
@@ -47,11 +46,10 @@ export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isV
                             <div className="accordion-name cursor-pointer w-full flex flex-col gap-0 lg:flex-row  lg:items-center lg:gap-2">
                                 <h3 className="text-lg font-semibold mb-0">{name}</h3>
                                 <ScrambleIn
-                                    ref={scrambleRef}
                                     text={type}
                                     scrambleSpeed={15}
                                     scrambledLetterCount={8}
-                                    autoStart={false}
+                                    autoStart={true}
                                 />
 
                             </div>

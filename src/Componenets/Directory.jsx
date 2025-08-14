@@ -1,5 +1,5 @@
 import './Directory.css'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { useNavigate,useLocation } from "react-router";
 import { motion } from "motion/react"
 import ScrambleHover from "../Componenets/Animation/scramble-hover"
@@ -13,18 +13,7 @@ export default function Directory({name,description,link,navigationType}){
     const [isHovering,setIsHovering]=useState(false)
     let navigate = useNavigate();
 
-    const scrambleRef = useRef(null)
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        const delay = pathname === "/" ? 3000 : pathname === "/ressources" ? 1400 : 0;
-        const timer = setTimeout(() => {
-        scrambleRef.current?.start()
-        }, delay)
-
-        return () => clearTimeout(timer)
-    }, [pathname])
-
+  
 
 
     function Navigate(){
@@ -36,7 +25,6 @@ export default function Directory({name,description,link,navigationType}){
 
 
             <div   className={`py-4 px-4`}>
-                {/* <h1 className="text-xl font-semibold">{name}</h1> */}
                 <motion.div
                 initial={{ opacity: 1, y: 0 }} 
                 whileHover={{
@@ -59,15 +47,13 @@ export default function Directory({name,description,link,navigationType}){
                 </motion.div>
 
                 <ScrambleIn
-                ref={scrambleRef}
                 text={description}
                 scrambleSpeed={8}
                 scrambledLetterCount={8}
-                autoStart={false}
+                autoStart={true}
                 />
 
               
-                {/* <p className="py-1 text-md cursor-pointer text-gray-600 font-medium">{description}</p> */}
             </div>
 
 
