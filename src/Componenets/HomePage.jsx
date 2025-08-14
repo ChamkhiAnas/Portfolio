@@ -20,11 +20,18 @@ export default function HomePage(){
     const [sideProjects,setSideProjects]=useState(t('home.sideProjects', { returnObjects: true }))
     const [directory,setDirectory]=useState(t('home.directory', { returnObjects: true }))
     const [salutation,setSalutation]=useState(t('home.salutation', { returnObjects: true }))
-
+    const [startAnimation, setStartAnimation] = useState(false);
 
     
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setStartAnimation(true);
+        }, 1700);
+        
+        return () => clearTimeout(timer);
+      }, []);
+      
 
-    console.log("salutation",salutation)
 
     useEffect(() => {
         setProjects(t('home.projects', { returnObjects: true }));
@@ -55,6 +62,7 @@ export default function HomePage(){
                 <motion.p className="name flex flex-wrap sm:gap-2 font-extrabold text-xl md:text-2xl" layout>
                 <TextRotate
                     texts={salutation}
+                    auto={startAnimation}
                     mainClassName="overflow-hidden py-0.5 sm:py-1 md:py-2 sm:justify-center "
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
@@ -68,7 +76,7 @@ export default function HomePage(){
                 <motion.span
                     className="pt-0.5 sm:pt-1 md:pt-2"
                     layout
-                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                    transition={{ type: "spring", damping: 30, stiffness: 400, }}
                 >
                     {t('home.welcome')}
                 </motion.span>

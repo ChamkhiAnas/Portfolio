@@ -1,6 +1,6 @@
 import './Directory.css'
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate } from "react-router";
+import { useNavigate,useLocation } from "react-router";
 import { motion } from "motion/react"
 import ScrambleHover from "../Componenets/Animation/scramble-hover"
 import ScrambleIn from "../Componenets/Animation/scramble-in"
@@ -14,14 +14,16 @@ export default function Directory({name,description,link,navigationType}){
     let navigate = useNavigate();
 
     const scrambleRef = useRef(null)
+    const { pathname } = useLocation();
 
     useEffect(() => {
+        const delay = pathname === "/" ? 3000 : pathname === "/ressources" ? 1400 : 0;
         const timer = setTimeout(() => {
         scrambleRef.current?.start()
-        }, 3000)
+        }, delay)
 
         return () => clearTimeout(timer)
-    }, [])
+    }, [pathname])
 
 
 

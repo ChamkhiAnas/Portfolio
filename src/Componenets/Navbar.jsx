@@ -36,7 +36,7 @@ export default function Navbar(){
 
 
   function sendMessage(){
-    window.location.href = "mailto:chamkhianas@gmail.com?subject=Hello Anas";          
+    window.location.href = "mailto:anas@chamkhi.com?subject=Hello Anas";          
   }
 
 
@@ -44,24 +44,11 @@ export default function Navbar(){
 
   useGSAP(() => {
     const paths = container.current.querySelectorAll(".draw-path");
-    const leftEye =container.current.querySelector("#leftEye")
-    const rightEye =container.current.querySelector("#rightEye")
-
-    console.log("leftEye",leftEye)
-    console.log("rightEye",rightEye)
-    
-    // const tl = gsap.timeline({ repeat: 2,repeatDelay: 0.5 });
-
     paths.forEach((path) => {
       path.style.fill = "none";
       path.style.stroke = "none"; 
     });
 
-    // tl.to(rightEye, {opacity: 0, duration: 0.4, ease: "power1.inOut"})
-    // .to(leftEye, { opacity: 0, duration: 0.4, ease: "power1.inOut" }) 
-    // .to(rightEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
-    // tl.to(leftEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
-    // .to(rightEye, { opacity: 1, duration: 0.4, ease: "power1.inOut" }) 
 
     gsap.to(paths, {
       fill: "#000",          

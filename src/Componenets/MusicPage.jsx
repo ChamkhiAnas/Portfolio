@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import MusicPlayer from "./MusicPlayer";
 import { useTranslation } from "react-i18next";
+import VerticalCutReveal from "../Componenets/Animation/vertical-cut-reveal"
+import { motion, stagger, useAnimate } from "motion/react"
+
 
 export default function MusicPage(){
 
@@ -217,10 +220,22 @@ export default function MusicPage(){
                                                              
             </h1>
 
-            <div className="grid description grid-cols-5">
-                <h4 className="text-xl my-6   font-medium  col-span-5">
-                {t('radio.description')}                                                           
-                </h4>
+            <div className="description flex my-6">
+
+                <VerticalCutReveal
+                    splitBy="words"
+                    staggerDuration={0.025}
+                    staggerFrom="first"
+                    wordLevelClassName="text-xl   font-medium  col-span-5"
+                    transition={{
+                    type: "spring",
+                    stiffness: 300, 
+                    damping: 20,    
+                    mass: 0.5    ,          
+                    }}
+                >
+                  {t('radio.description')}                                                                                                  
+                </VerticalCutReveal>
             </div>
 
 
