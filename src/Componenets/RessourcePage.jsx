@@ -41,7 +41,7 @@ export default function RessourcePage(){
                 mass: 0.5    ,          
                 }}
             >
-            {t('radio.description')}                                                                                                  
+            {t('ressources.description')}                                                                                                  
             </VerticalCutReveal>
             </div>
 
