@@ -34,6 +34,7 @@ export default function HomePage(){
 
 
     useEffect(() => {
+        console.log("language changed to",t('home.projects', { returnObjects: true }))
         setProjects(t('home.projects', { returnObjects: true }));
         setSideProjects(t('home.sideProjects', { returnObjects: true }));
         setDirectory(t('home.directory', { returnObjects: true }));
@@ -118,7 +119,6 @@ export default function HomePage(){
                     mass: 0.5  ,  
                     delay: 0.9,
                     }}
-                    onComplete={() => setShowThird(true)}
 
                 >
                     {t('home.description2')}

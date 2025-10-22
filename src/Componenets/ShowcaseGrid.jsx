@@ -37,6 +37,7 @@ export default function ShowcaseGrid({name,type,year,link,linkName,tags,logo,isV
                             <div className="accordion-name cursor-pointer w-full flex flex-col gap-0 lg:flex-row  lg:items-center lg:gap-2">
                                 <h3 className="text-lg font-semibold mb-0">{name}</h3>
                                 <ScrambleIn
+                                    key={type}
                                     text={type}
                                     scrambleSpeed={15}
                                     scrambledLetterCount={8}

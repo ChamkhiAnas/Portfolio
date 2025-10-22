@@ -38,6 +38,7 @@ export default function Directory({name,description,link,navigationType}){
                 }}
                 >
                 <ScrambleHover
+                    key={name}
                     text={name}
                     scrambleSpeed={30}
                     maxIterations={10}
@@ -47,6 +48,7 @@ export default function Directory({name,description,link,navigationType}){
                 </motion.div>
 
                 <ScrambleIn
+                key={description}
                 text={description}
                 scrambleSpeed={8}
                 scrambledLetterCount={8}
